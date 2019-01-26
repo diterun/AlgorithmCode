@@ -1,64 +1,99 @@
 package com.baek;
-/**
- * 로봇 청소기가 주어졌을 때, 청소하는 영역의 개수를 구하는 프로그램을 작성하시오.
 
-로봇 청소기가 있는 장소는 N×M 크기의 직사각형으로 나타낼 수 있으며, 1×1크기의 정사각형 칸으로 나누어져 있다. 각각의 칸은 벽 또는 빈 칸이다. 청소기는 바라보는 방향이 있으며, 이 방향은 동, 서, 남, 북중 하나이다. 지도의 각 칸은 (r, c)로 나타낼 수 있고, r은 북쪽으로부터 떨어진 칸의 개수, c는 서쪽으로 부터 떨어진 칸의 개수이다.
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 
-로봇 청소기는 다음과 같이 작동한다.
-
-현재 위치를 청소한다.
-현재 위치에서 현재 방향을 기준으로 왼쪽방향부터 차례대로 탐색을 진행한다.
-왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
-왼쪽 방향에 청소할 공간이 없다면, 그 방향으로 회전하고 2번으로 돌아간다.
-네 방향 모두 청소가 이미 되어있거나 벽인 경우에는, 바라보는 방향을 유지한 채로 한 칸 후진을 하고 2번으로 돌아간다.
-네 방향 모두 청소가 이미 되어있거나 벽이면서, 뒤쪽 방향이 벽이라 후진도 할 수 없는 경우에는 작동을 멈춘다.
-로봇 청소기는 이미 청소되어있는 칸을 또 청소하지 않으며, 벽을 통과할 수 없다.
-
-입력
-첫째 줄에 세로 크기 N과 가로 크기 M이 주어진다. (3 ≤ N, M ≤ 50)
-
-둘째 줄에 로봇 청소기가 있는 칸의 좌표 (r, c)와 바라보는 방향 d가 주어진다. d가 0인 경우에는 북쪽을, 1인 경우에는 동쪽을, 2인 경우에는 남쪽을, 3인 경우에는 서쪽을 바라보고 있는 것이다.
-
-셋째 줄부터 N개의 줄에 장소의 상태가 북쪽부터 남쪽 순서대로, 각 줄은 서쪽부터 동쪽 순서대로 주어진다. 빈 칸은 0, 벽은 1로 주어진다. 장소의 모든 외곽은 벽이다.
-
-로봇 청소기가 있는 칸의 상태는 항상 빈 칸이다.
-
-출력
-로봇 청소기가 청소하는 칸의 개수를 출력한다.
-
-
- * @author HanamHwang
- *
- *
-3 3
-1 1 0
-1 1 1
-1 0 1
-1 1 1
-
-출력 1
-
-11 10
-7 4 0
-1 1 1 1 1 1 1 1 1 1
-1 0 0 0 0 0 0 0 0 1
-1 0 0 0 1 1 1 1 0 1
-1 0 0 1 1 0 0 0 0 1
-1 0 1 1 0 0 0 0 0 1
-1 0 0 0 0 0 0 0 0 1
-1 0 0 0 0 0 0 1 0 1
-1 0 0 0 0 0 1 1 0 1
-1 0 0 0 0 0 1 1 0 1
-1 0 0 0 0 0 0 0 0 1
-1 1 1 1 1 1 1 1 1 1
-
-출력 57
- */
 public class Main_14503 {
+	static int MAX = 50;
+	static int N, M, result;
+	static int r, c, d;
+	static int[][] map = new int[MAX][MAX];
+	static String[] line;
+	/** 0(북), 1(동), 2(남), 3(서) */
+	static int[][] move = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws Exception {
+		System.setIn(new FileInputStream("res/baek14503.txt"));
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
+		line = in.readLine().split(" ");
+		N = Integer.parseInt(line[0]);
+		M = Integer.parseInt(line[1]);
+
+		line = in.readLine().split(" ");
+		r = Integer.parseInt(line[0]);
+		c = Integer.parseInt(line[1]);
+		d = Integer.parseInt(line[2]);
+
+		for (int i = 0; i < N; i++) {
+			line = in.readLine().split(" ");
+			for (int j = 0; j < M; j++) {
+				map[i][j] = Integer.parseInt(line[j]);
+			}
+		}
+
+		map[r][c] = 2;
+		result++;
+
+		while (true) {
+			/** 앞쪽*/
+			int fr = r + move[d][0];
+			int fc = c + move[d][1];
+			int front = map[fr][fc];
+			/** 왼쪽*/
+			int lr = r + move[(d + 3) % 4][0];
+			int lc = c + move[(d + 3) % 4][1];
+			int left = map[lr][lc];
+			/** 오른쪽*/
+			int rr = r + move[(d + 1) % 4][0];
+			int rc = c + move[(d + 1) % 4][1];
+			int right = map[rr][rc];
+			/** 뒤쪽*/
+			int br = r + move[(d + 2) % 4][0];
+			int bc = c + move[(d + 2) % 4][1];
+			int back = map[br][bc];
+
+			/** 모두가 벽이거나 청소한 상태*/
+			if((back == 1 || back == 2)
+			&& (front == 1 || front == 2)
+			&& (left == 1 || left == 2)
+			&& (right == 1 || right == 2)) {
+				/** 뒤쪽은 벽이고, 나머지는 벽이거나 청소한 상태*/
+				if(back == 1) {
+					break;
+				} /** 뒤쪽은 벽이 아니고 나머지는 벽이거나 청소한 상태*/
+				else {
+					r = br;
+					c = bc;
+					continue;
+				}
+			}
+			
+			/** 왼쪽은 청소가 되었으나, 나머지는 모르는 상태*/
+			d = (d + 3) % 4;
+			
+			/** 왼쪽에 청소가 안 된 상태*/
+			if(left == 0) {
+				r = lr;
+				c = lc;
+				map[r][c] = 2;
+				result++;
+				continue;
+			}
+		}
+
+//		for (int i = 0; i < N; i++) {
+//			for (int j = 0; j < M; j++) {
+//				System.out.print(map[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+		
+		System.out.println(result);
+
+		in.close();
 	}
 
 }
