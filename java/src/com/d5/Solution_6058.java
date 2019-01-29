@@ -66,6 +66,8 @@ public class Solution_6058 {
 		T = Integer.parseInt(br.readLine().trim());
 
 		for (test_case = 1; test_case <= T; test_case++) {
+			result = 0;
+			
 			line = br.readLine().split(" ");
 			B = Integer.parseInt(line[0].trim());
 			L = Integer.parseInt(line[1].trim());
