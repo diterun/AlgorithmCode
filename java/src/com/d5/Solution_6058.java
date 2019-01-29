@@ -3,7 +3,7 @@ package com.d5;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
-/**
+/** 아이고 어렵다
  * 
 각 와인잔은 250ml의 와인을 담을 수 있다. 바텐더는 750ml의 와인 B 병을 가장 위의 와인잔(L=1, N=1)에 붓는다.
 
