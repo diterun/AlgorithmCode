@@ -75,12 +75,18 @@ public class Solution_1249_end {
 			 */
 			if(map[my][mx] != -1) {
 				sum += map[my][mx];
-				if(sum > result) {	//움직인 곳을 더했는데, 이미 한 번 나왔던 result보다 크다면 그쪽으로 가지 않는다.
+				/**
+				 * 움직인 곳을 더했는데, 이미 한 번 나왔던 result보다 크다면 그쪽으로 가지 않는다.
+				 */
+				if(sum > result) {
 					sum -= map[my][mx];
 					continue;
 				}
-				if(minimum[my][mx] > sum) {	//밟은 곳에 적혀 있는 minimum값보다 크면 가지 않는다.
-					minimum[my][mx] = sum;
+				/**
+				 * 밟은 곳에 적혀 있는 minimum값보다 크면 가지 않는다.
+				 */
+				if(minimum[my][mx] > sum) {
+					minimum[my][mx] = sum;	//sum이 작으면 작은 값을 넣어준다.
 					
 					getLowerWay(my, mx, sum);
 				}
