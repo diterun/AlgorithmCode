@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Main_16236 {
+public class Main_16236_end {
 	static int MAX = 23;
 	static int n, result;
 	/**
