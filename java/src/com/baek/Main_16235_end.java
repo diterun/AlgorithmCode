@@ -1,7 +1,7 @@
 package com.baek;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Main_16235_end {
@@ -29,8 +29,8 @@ public class Main_16235_end {
 	static String[] line;
 
 	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader("res/baek16235.txt"));
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.setIn(new FileInputStream("res/baek16235.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		line = br.readLine().split(" ");
 		N = Integer.parseInt(line[0]);

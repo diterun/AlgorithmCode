@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution_4699 {
+public class Solution_4699_end {
 	static int MAX = 26;
 	static int T, test_case;
 	static int result, L, K;

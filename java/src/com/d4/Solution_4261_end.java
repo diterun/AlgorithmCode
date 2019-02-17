@@ -1,6 +1,7 @@
 package com.d4;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 
@@ -21,8 +22,8 @@ public class Solution_4261_end {
 	static char[] num;
 
 	public static void main(String[] args) throws Exception {
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("res/4261.txt"));
+		System.setIn(new FileInputStream("res/4261.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //		start = System.nanoTime();
 		
 		T = Integer.parseInt(br.readLine().trim());
