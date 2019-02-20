@@ -1,9 +1,8 @@
 package com.d3;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 
 public class Solution_1225_end {
 	static int T, test_case;
@@ -14,8 +13,8 @@ public class Solution_1225_end {
 	
 	public static void main(String[] args) throws Exception {
 		start = System.nanoTime();
-		BufferedReader br = new BufferedReader(new FileReader("res/1225.txt"));
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.setIn(new FileInputStream("res/1225.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 //		T = 10;
 		

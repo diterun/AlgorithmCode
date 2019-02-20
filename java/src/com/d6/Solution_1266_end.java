@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution_1266 {
+public class Solution_1266_end {
 	static int T, test_case;
 	static double a, b;
 	static int[] combi = new int[19];

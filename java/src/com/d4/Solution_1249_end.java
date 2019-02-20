@@ -1,6 +1,7 @@
 package com.d4;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 
@@ -22,8 +23,8 @@ public class Solution_1249_end {
 	static char[] line;
 
 	public static void main(String[] args) throws Exception{
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("res/1249.txt"));
+		System.setIn(new FileInputStream("res/1249.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());
 

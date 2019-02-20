@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Main_5373 {
+public class Main_5373_end {
 	static int t, T;
 	static int n;
 	static String[] input;
