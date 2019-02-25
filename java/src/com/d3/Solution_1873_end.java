@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_1873 {
+public class Solution_1873_end {
 	static int MAX = 22;
 	static int T, test_case, result, h, w, n;
 	/**움직임*/
@@ -23,6 +23,7 @@ public class Solution_1873 {
 	static int y, x, d;
 	static StringTokenizer st;
 	static char[] input;
+	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
 		System.setIn(new FileInputStream("res/1873.txt"));
@@ -72,6 +73,8 @@ public class Solution_1873 {
 						map[dy][dx] = '^';
 						y = dy;
 						x = dx;
+					} else {
+						map[y][x] = '^';
 					}
 					break;
 				case 'D':
@@ -83,6 +86,8 @@ public class Solution_1873 {
 						map[dy][dx] = 'v';
 						y = dy;
 						x = dx;
+					} else {
+						map[y][x] = 'v';
 					}
 					break;
 				case 'L':
@@ -94,6 +99,8 @@ public class Solution_1873 {
 						map[dy][dx] = '<';
 						y = dy;
 						x = dx;
+					} else {
+						map[y][x] = '<';
 					}
 					break;
 				case 'R':
@@ -105,20 +112,52 @@ public class Solution_1873 {
 						map[dy][dx] = '>';
 						y = dy;
 						x = dx;
+					} else {
+						map[y][x] = '>';
 					}
 					break;
 				case 'S':
-					dy = y;
-					dx = x;
-					while(true) {
-						dy = dy + move[d][0];
-						dx = dx + move[d][1];
-						if(map[dy][dx] == '#') {
-							break;
-						} else if(map[dy][dx] == '*') {
-							map[dy][dx] = '.';
-							break;
+					switch(d) {
+					case 0:
+						for (int j = x + 1; j <= w; j++) {
+							if(map[y][j] == '*') {
+								map[y][j] = '.';
+								break;
+							} else if(map[y][j] == '#') {
+								break;
+							}
 						}
+						break;
+					case 1:
+						for (int j = x - 1; j > 0; j--) {
+							if(map[y][j] == '*') {
+								map[y][j] = '.';
+								break;
+							} else if(map[y][j] == '#') {
+								break;
+							}
+						}
+						break;
+					case 2:
+						for (int j = y + 1; j <= h; j++) {
+							if(map[j][x] == '*') {
+								map[j][x] = '.';
+								break;
+							} else if(map[j][x] == '#') {
+								break;
+							}
+						}
+						break;
+					case 3:
+						for (int j = y - 1; j > 0; j--) {
+							if(map[j][x] == '*') {
+								map[j][x] = '.';
+								break;
+							} else if(map[j][x] == '#') {
+								break;
+							}
+						}
+						break;
 					}
 					break;
 				}
@@ -131,14 +170,15 @@ public class Solution_1873 {
 //				}
 			}
 			
-			System.out.print("#" + test_case + " ");
+			sb.append("#").append(test_case).append(" ");
 			for (int i = 1; i <= h; i++) {
 				for (int j = 1; j <= w; j++) {
-					System.out.print(map[i][j]);
+					sb.append(map[i][j]);
 				}
-				System.out.println();
+				sb.append("\n");
 			}
 		}
+		System.out.println(sb);
 
 		br.close();
 	}

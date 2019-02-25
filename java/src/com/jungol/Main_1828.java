@@ -34,10 +34,14 @@ public class Main_1828 {
 				}
 			}
 		}
+//		for (int i = 0; i < n; i++) {
+//			System.out.println(ref[i][0] + "~" + ref[i][1]);
+//		}
 
 		endOfTem = -272;
 		for (int i = 0; i < n; i++) {
 			if(ref[i][0] > endOfTem) {
+				System.out.println(ref[i][1] + 270);
 				endOfTem = ref[i][1];
 				result++;
 			}
