@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Main_1828 {
+public class Main_1828_end {
 	static int n, endOfTem, result;
 	static int[][] ref;
 	static String[] inputS;
@@ -41,7 +41,7 @@ public class Main_1828 {
 		endOfTem = -272;
 		for (int i = 0; i < n; i++) {
 			if(ref[i][0] > endOfTem) {
-				System.out.println(ref[i][1] + 270);
+				System.out.println(ref[i][1]);
 				endOfTem = ref[i][1];
 				result++;
 			}

@@ -1,7 +1,7 @@
 package com.d5;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Solution_1857_end {
@@ -43,8 +43,8 @@ public class Solution_1857_end {
 	}
 
 	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader("res/1857.txt"));
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.setIn(new FileInputStream("res/1857.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int i = 0; i < MaxSCnt; i++) {
 			ms[i] = new MaxS();
