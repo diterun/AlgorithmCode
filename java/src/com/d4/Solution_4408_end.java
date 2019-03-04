@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_4408 {
+public class Solution_4408_end {
 	static int T, test_case;
 	/** n명의 학생과 단위 시간 result */
 	static int n, result, s, e, temp;

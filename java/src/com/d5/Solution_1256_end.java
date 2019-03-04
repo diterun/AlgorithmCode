@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution_1256 {
+public class Solution_1256_end {
 	static int T, test_case, n, size;
 	static String input;
 	static String[] result;
