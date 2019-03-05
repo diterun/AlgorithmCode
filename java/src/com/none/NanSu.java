@@ -10,9 +10,9 @@ public class NanSu {
 		String data;
 		FileWriter output = new FileWriter("res/temp.txt");
 		
-		for (int i = 0; i < 500; i++) {
-			for (int j = 0; j < 500; j++) {
-				data = r.nextInt(1000) + " ";
+		for (int i = 0; i < 1; i++) {
+			for (int j = 0; j < 100; j++) {
+				data = (r.nextInt(99) + 1) + " ";
 				output.write(data);
 			}
 			output.write('\n');
