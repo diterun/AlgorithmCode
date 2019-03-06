@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_15686 {
+public class Main_15686_end {
 	static int n, m, a, result;
 	/**
 	 * home	- 집들을 저장, index로 homei
