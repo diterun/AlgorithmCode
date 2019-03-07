@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_1493 {
+public class Solution_1493_end {
 	static int MAX = 300;
 	static int T, test_case;
 	static int p, q, x1, y1, x2, y2, temp, x, y;
@@ -23,7 +23,6 @@ public class Solution_1493 {
 		
 		for (int i = 1; i < MAX; i++) {
 			sero[i] = sero[i - 1] + i;
-			System.out.println(i + " " + sero[i]);
 		}
 		
 		for (test_case = 1; test_case <= T; test_case++) {
@@ -37,7 +36,6 @@ public class Solution_1493 {
 					
 					x1 = 1 + temp;
 					y1 = i + 1 - temp;
-					System.out.println(p + " : " + x1 +", " +y1);
 					break;
 				}
 			}
@@ -48,15 +46,12 @@ public class Solution_1493 {
 
 					x2 = 1 + temp;
 					y2 = i + 1 - temp;
-					System.out.println(q + " : " + x2 +", " +y2);
 					break;
 				}
 			}
 			
 			x = x1 + x2;
 			y = y1 + y2;
-			
-			System.out.println(x + ", " + y);
 			
 			sb.append("#").append(test_case).append(" ").append(sero[y + x - 2] + x - 1).append("\n");
 		}
