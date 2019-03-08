@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_7194 {
+public class Solution_7194_2 {
 	static int T, test_case;
 	static int start, end, a, b, result, sub, cnt;
 	static StringTokenizer st;
@@ -54,6 +54,8 @@ public class Solution_7194 {
 							}
 						}
 					}
+
+//				System.out.println(start + " ~ " + end + " | " + result);
 
 					if (end == start) {
 						break;
