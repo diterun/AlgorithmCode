@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_14889 {
+public class Main_14889_end {
 	static int n, result, tCnt;
 	static int[] team1, team2;
 	static int[][] pair;

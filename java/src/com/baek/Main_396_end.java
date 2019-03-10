@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Main_396_2 {
+public class Main_396_end {
 	static int n, m, result, subR;
 	static int y1, x1, y2, x2;
 	static int[][] map;
