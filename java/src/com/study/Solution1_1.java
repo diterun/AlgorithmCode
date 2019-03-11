@@ -14,7 +14,7 @@ public class Solution1_1 {
 
 	public static void main(String[] args) throws Exception{
 		start = System.nanoTime();
-		System.setIn(new FileInputStream("res/Solution1_1.txt"));
+		System.setIn(new FileInputStream("res1/Solution1_1.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());
