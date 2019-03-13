@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class Solution1_1 {
 	static int T, t, n;
 	static int[][] map;
-	static int[][][] dp;
+	static long[][][] dp;
 	static StringTokenizer st;
 	static long start, end;
 
@@ -23,7 +23,7 @@ public class Solution1_1 {
 			n = Integer.parseInt(br.readLine().trim());
 			
 			map = new int[n + 2][n + 2];
-			dp = new int[3][n + 2][n + 2];
+			dp = new long[3][n + 2][n + 2];
 			
 			for (int i = 0; i < n + 2; i++) {
 				for (int j = 0; j < n + 2; j++) {
@@ -60,14 +60,14 @@ public class Solution1_1 {
 		System.out.println(end - start);
 	}
 
-	private static int dfs(int y, int x, int type) {
+	private static long dfs(int y, int x, int type) {
 		if(y == 2 && x == 3 && type == 1) {
 			return 1;
 		}
 		if(y == 3 && x == 2 && type == 2) {
 			return 1;
 		}
-		int sub = 0;
+		long sub = 0;
 		
 		if(type == 1) {
 			if(map[y][x - 1] == 0 && map[y][x - 2] == 0 && map[y - 1][x - 2] == 0 && map[y - 1][x - 1] == 0) {

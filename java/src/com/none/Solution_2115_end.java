@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_2115 {
+public class Solution_2115_end {
 	static int MAX = 15;
 	static int T, test_case, result, n, m, c;
 	static int[] gain, seleted;
