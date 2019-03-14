@@ -112,28 +112,6 @@ public class Main_396_end {
 		br.close();
 	}
 
-//	private static void printMap() {
-//		System.out.println("Map!!");
-//		for (int i = 1; i <= n; i++) {
-//			for (int j = 1; j <= m; j++) {
-//				System.out.print(map[i][j] + " ");
-//			}
-//			System.out.println();
-//		}
-//		System.out.println();
-//	}
-//
-//	private static void printCheck() {
-//		System.out.println("Check!!");
-//		for (int i = 1; i <= n; i++) {
-//			for (int j = 1; j <= m; j++) {
-//				System.out.print(check[i][j] + " ");
-//			}
-//			System.out.println();
-//		}
-//		System.out.println();
-//	}
-
 	private static boolean checkDe(int y, int x) {
 		int subResult = 1;
 		LinkedList<Integer> q = new LinkedList<>();
