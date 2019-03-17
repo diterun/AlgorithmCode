@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_14891 {
+public class Main_14891_end {
 	static int k, result;
 	/**
 	 * 톱니바퀴 1번부터 4번이 각각 0~3번 index에 대응 된다.
