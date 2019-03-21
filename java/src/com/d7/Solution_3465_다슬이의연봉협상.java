@@ -26,7 +26,7 @@ import java.io.InputStreamReader;
  * 그 이후에는 자신보다 연봉이 높은 상사로 가거나 다슬이에게 간다.
  */
 
-public class Solution_3465 {
+public class Solution_3465_다슬이의연봉협상 {
 	static int MAX = 300001;
 	static int T, test_case;
 	static int n, result, money, up;

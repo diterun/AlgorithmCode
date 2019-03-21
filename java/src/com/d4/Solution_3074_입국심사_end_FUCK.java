@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_3074_end_FUCK {
+public class Solution_3074_입국심사_end_FUCK {
 	static int T, test_case;
 	static int n, m, simsa[];
 	static long sum, min, max, mid, result;
@@ -42,7 +42,6 @@ public class Solution_3074_end_FUCK {
 					sum += (mid / simsa[i]);
 				}
 				
-//				System.out.println(m +", " +sum + " : " + min + ", " + mid+", "+max);
 				if(sum >= m) {
 					result = Math.min(result, mid);
 					max = mid - 1;
@@ -51,35 +50,6 @@ public class Solution_3074_end_FUCK {
 				}
 			}
 			System.out.println("#" + test_case + " " + result);
-			
-//			sum = 0;
-//			for (int i = 0; i < n; i++) {
-//				sum += (min / simsa[i]);
-//			}
-//			if(sum == m) {
-//				System.out.println("1#" + test_case + " " + min);
-//				continue;
-//			} 
-//
-//			sum = 0;
-//			
-//			for (int i = 0; i < n; i++) {
-//				sum += (mid / simsa[i]);
-//			}
-//
-//			if(sum == m) {
-//				System.out.println("2#" + test_case + " " + mid);
-//			} else {
-//				for (long i = max; i < MAX; i++) {
-//					for (int j = 0; j < n; j++) {
-//						if(i % simsa[j] == 0) {
-//							System.out.println("3#" + test_case + " " + i);
-//							i = MAX - 1;
-//							j = n;
-//						}
-//					}
-//				}
-//			}
 		}
 
 		br.close();
