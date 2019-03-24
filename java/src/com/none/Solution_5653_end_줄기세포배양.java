@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Solution_5653_줄기세포배양 {
+public class Solution_5653_end_줄기세포배양 {
 	static int PA = 300;
 	static int T, test_case, n, m, k, result, cnt;
 	static LinkedList<Integer> q = new LinkedList<Integer>();
