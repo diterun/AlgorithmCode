@@ -3,7 +3,7 @@ package com.d4;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-public class Solution_1865_동철이의일분배 {
+public class Solution_1865_end_동철이의일분배 {
 	static int T, test_case;
 	static int n;
 	static int[][] p;
