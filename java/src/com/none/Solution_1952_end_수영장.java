@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Solution_1952_end {
+public class Solution_1952_end_수영장 {
 	static int T, test_case, day, mon, mon3, year, result, max;
 	static int[] month = new int[18];
 	static int[] jojo;

@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_3143_가장빠른문자열타이핑 {
+public class Solution_3143_end_가장빠른문자열타이핑 {
 	static int T, test_case, alen, blen, result;
 	static char[] a, b;
 	static StringTokenizer st;

@@ -1,7 +1,10 @@
 package com.d5;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 /**
  * ******시도 01******
@@ -30,9 +33,7 @@ import java.util.Scanner;
 public class Solution_5295_end_흘러라시간딴짓하기 {
 	static int T, test_case, n, num;
 	static int result;
-	static String[] inputs1;
-	static String[] inputs2;
-	static String[] inputs3;
+	static StringTokenizer st1, st2, st3;
 	/**
 	 * 한 줄을 저장한다.
 	 * 1번째 줄은 [값]=index 형식으로 저장된다. (index를 빨리 찾기 위해, 중복이 없어서 가능)
@@ -54,33 +55,33 @@ public class Solution_5295_end_흘러라시간딴짓하기 {
 
 	public static void main(String[] args) throws Exception {
 		System.setIn(new FileInputStream("res/5925.txt"));
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		T = Integer.parseInt(sc.nextLine().trim());
+		T = Integer.parseInt(br.readLine().trim());
 
 		for (test_case = 1; test_case <= T; test_case++) {
 			result = 0;
 
-			n = Integer.parseInt(sc.nextLine().trim());
+			n = Integer.parseInt(br.readLine().trim());
 			line = new int[3][n + 1];
 			lineCnt = new int[2][n + 1];
 			isClear = new boolean[n + 1];
-			
-			inputs1 = sc.nextLine().split(" ");
-			inputs2 = sc.nextLine().split(" ");
-			inputs3 = sc.nextLine().split(" ");
+
+			st1 = new StringTokenizer(br.readLine());
+			st2 = new StringTokenizer(br.readLine());
+			st3 = new StringTokenizer(br.readLine());
 			for (int i = 0; i < n; i++) {
 				//첫 라인의 숫자는 line[값] = index 로 넣어준다!
-				line[0][Integer.parseInt(inputs1[i])] = i;
+				line[0][Integer.parseInt(st1.nextToken())] = i;
 				
 				/**
 				 * 값을 저장하고 그 값에 해당하는 cnt를 늘린다.
 				 */
-				num = Integer.parseInt(inputs2[i]);
+				num = Integer.parseInt(st2.nextToken());
 				line[1][i] = num;
 				lineCnt[0][num]++;
 				
-				num = Integer.parseInt(inputs3[i]);
+				num = Integer.parseInt(st3.nextToken());
 				line[2][i] = num;
 				lineCnt[1][num]++;
 			}
@@ -106,7 +107,7 @@ public class Solution_5295_end_흘러라시간딴짓하기 {
 			System.out.println("#" + test_case + " " + result);
 		}
 
-		sc.close();
+		br.close();
 	}
 
 	private static void dfs(int index) {

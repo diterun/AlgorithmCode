@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_3074_입국심사_end_FUCK {
+public class Solution_3074_end_입국심사_FUCK {
 	static int T, test_case;
 	static int n, m, simsa[];
 	static long sum, min, max, mid, result;
