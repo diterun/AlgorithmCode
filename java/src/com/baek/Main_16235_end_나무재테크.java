@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Main_16235_end {
+public class Main_16235_end_나무재테크 {
 	static int MAX = 12, TREEMAX = 100000;
 	static int N, M, K, result;
 	/**
