@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_5656_벽돌깨기 {
+public class Solution_5656_end_벽돌깨기 {
 	static int T, t, n, w, h, result;
 	static int[][] map, temp;
 	static int[] gogo;
