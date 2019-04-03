@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_2283_RGB마을 {
+public class Main_2283_end_RGB마을 {
 	static int n, result, r1, g1, b1, r2, g2, b2, in1, in2, in3;
 	static StringTokenizer st;
 

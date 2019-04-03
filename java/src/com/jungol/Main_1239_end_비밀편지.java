@@ -3,7 +3,7 @@ package com.jungol;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-public class Main_1239_비밀편지 {
+public class Main_1239_end_비밀편지 {
 	static int n;
 	static char[] letter;
 	static char[] word = new char[64];

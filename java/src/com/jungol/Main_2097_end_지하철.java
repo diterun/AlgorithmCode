@@ -3,7 +3,7 @@ package com.jungol;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-public class Main_2097_지하철 {
+public class Main_2097_end_지하철 {
 	static int n, destiny, result, results_cnt;
 	static int[] results;
 	static int[][] gogo;

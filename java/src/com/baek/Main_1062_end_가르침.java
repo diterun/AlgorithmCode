@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_1062_가르침 {
+public class Main_1062_end_가르침 {
 	static int n, k, result;
 	static int[] dan;
 	static StringTokenizer st;

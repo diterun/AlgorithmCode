@@ -5,27 +5,14 @@ import java.util.Random;
 
 public class NanSu {
 	public static void main(String[] args) throws Exception{
-		Random r = new Random();
-		int n = 10;
+		int n = 10000;
 		int m = 10;
-		int num;
-		String data =" ";
 		FileWriter output = new FileWriter("res1/temp.txt");
+
+		output.write(n + " " + m + "\n");
 		
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				num = r.nextInt(99) + 1;
-				
-				if(0 <= num && num < 80) {
-					data="A";
-				} else if(80 <= num && num < 90) {
-					data="W";
-				} else {
-					data="X";
-				}
-				output.write(data);
-			}
-			output.write('\n');
+		for (int j = 1; j <= m; j++) {
+			output.write("0 1 " + j + "\n");
 		}
 		
 		output.close();

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Solution_1824_혁진이의프로그램검증 {
+public class Solution_1824_end_혁진이의프로그램검증 {
 	static int T, t, r, c;
 	static char[][] map;
 	static boolean[][][][] check;

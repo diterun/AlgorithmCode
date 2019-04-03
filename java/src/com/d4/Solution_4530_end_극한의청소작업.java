@@ -3,7 +3,7 @@ package com.d4;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-public class Solution_4530_극한의청소작업 {
+public class Solution_4530_end_극한의청소작업 {
 	static int T, test_case;
 	static long s, e, result;
 

@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_15684_사다리조작 {
+public class Main_15684_end_사다리조작 {
 	static int n, m, h, result, a, b, max;
 	static boolean[][] sadary;
 	static StringTokenizer st;
