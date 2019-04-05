@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution_4366_정식이의은행업무 {
+public class Solution_4366_end_정식이의은행업무 {
 	static int T, t, size;
 	static long result;
 	static long[] binary;
@@ -36,10 +36,6 @@ public class Solution_4366_정식이의은행업무 {
 					temp *= 2;
 				}
 			}
-			
-//			for (int i = 0; i < size; i++) {
-//				System.out.println(binary[i]);
-//			}
 			
 			line = br.readLine().toCharArray();
 			size = line.length;
