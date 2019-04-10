@@ -3,7 +3,6 @@ package com.d5;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
 
 public class Solution_6732 {
 	static int T, test_case;

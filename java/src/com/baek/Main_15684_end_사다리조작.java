@@ -13,7 +13,7 @@ public class Main_15684_end_사다리조작 {
 	public static void main(String[] args) throws Exception {
 		result = 0;
 		
-		System.setIn(new FileInputStream("baek/15684.txt"));
+		System.setIn(new FileInputStream("res/baek/15684.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine());

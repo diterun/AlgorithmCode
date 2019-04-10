@@ -43,7 +43,7 @@ public class Solution_1857_end {
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1857.txt"));
+		System.setIn(new FileInputStream("res/d5/1857.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int i = 0; i < MaxSCnt; i++) {

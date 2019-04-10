@@ -34,7 +34,7 @@ public class Solution_3465_다슬이의연봉협상 {
 	static String[] in;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3465.txt"));
+		System.setIn(new FileInputStream("res/d7/3465.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine());

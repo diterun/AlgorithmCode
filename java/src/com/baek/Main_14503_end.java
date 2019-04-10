@@ -2,7 +2,6 @@ package com.baek;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 
 public class Main_14503_end {
@@ -15,7 +14,7 @@ public class Main_14503_end {
 	static int[][] move = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek14503.txt"));
+		System.setIn(new FileInputStream("res/baek/14503.txt"));
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 		line = in.readLine().split(" ");

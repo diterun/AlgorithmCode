@@ -3,7 +3,6 @@ package com.baek;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_15685_end {
@@ -12,7 +11,7 @@ public class Main_15685_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("baek/15685.txt"));
+		System.setIn(new FileInputStream("res/baek/15685.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		result = 0;

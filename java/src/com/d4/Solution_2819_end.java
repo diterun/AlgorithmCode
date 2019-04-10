@@ -14,7 +14,7 @@ public class Solution_2819_end {
 	static String[] inS;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/2819.txt"));
+		System.setIn(new FileInputStream("res/d4/2819.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

@@ -12,7 +12,7 @@ public class Solution_1865_end_동철이의일분배 {
 
 	public static void main(String[] args) throws Exception {
 		start = System.nanoTime();
-		System.setIn(new FileInputStream("res/1865.txt"));
+		System.setIn(new FileInputStream("res/d4/1865.txt"));
 		Scanner sc = new Scanner(System.in);
 
 		T = sc.nextInt();

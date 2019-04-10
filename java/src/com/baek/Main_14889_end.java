@@ -12,7 +12,7 @@ public class Main_14889_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek14889.txt"));
+		System.setIn(new FileInputStream("res/baek/14889.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		n = Integer.parseInt(br.readLine());

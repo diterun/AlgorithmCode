@@ -31,7 +31,7 @@ public class Solution_2383_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/2383.txt"));
+		System.setIn(new FileInputStream("res/none/2383.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

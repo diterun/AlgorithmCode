@@ -11,7 +11,7 @@ public class Solution_2105_디저트카페 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/2105.txt"));
+		System.setIn(new FileInputStream("res/none/2105.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

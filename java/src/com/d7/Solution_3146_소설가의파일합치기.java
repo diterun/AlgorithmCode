@@ -23,7 +23,7 @@ public class Solution_3146_소설가의파일합치기 {
 	static StringTokenizer st;
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3146.txt"));
+		System.setIn(new FileInputStream("res/d7/3146.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine());

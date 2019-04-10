@@ -13,7 +13,7 @@ public class Main_1620 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("baek/1620.txt"));
+		System.setIn(new FileInputStream("res/baek/1620.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine().trim());

@@ -12,7 +12,7 @@ public class Solution_1228_end {
 	static LinkedList<Integer> list = new LinkedList<>();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1228.txt"));
+		System.setIn(new FileInputStream("res/d3/1228.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 //		T = 10;

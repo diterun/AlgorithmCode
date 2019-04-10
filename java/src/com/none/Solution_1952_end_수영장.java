@@ -3,7 +3,6 @@ package com.none;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
@@ -15,7 +14,7 @@ public class Solution_1952_end_수영장 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1952.txt"));
+		System.setIn(new FileInputStream("res/none/1952.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

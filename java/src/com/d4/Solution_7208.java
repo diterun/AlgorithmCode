@@ -53,7 +53,6 @@ public class Solution_7208 {
 	}
 
 	private static void drowMap(int code) {
-		int color = nation[code];
 		boolean[] ok = new boolean[4];
 		boolean allTrue = true;
 		

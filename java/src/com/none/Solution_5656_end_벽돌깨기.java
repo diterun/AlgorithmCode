@@ -13,7 +13,7 @@ public class Solution_5656_end_벽돌깨기 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5656.txt"));
+		System.setIn(new FileInputStream("res/none/5656.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

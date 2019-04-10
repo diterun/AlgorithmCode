@@ -13,7 +13,7 @@ public class Main_16985_Maaaaaaaaaze {
 	public static void main(String[] args) throws Exception {
 		result = 0;
 		
-		System.setIn(new FileInputStream("baek/16985.txt"));
+		System.setIn(new FileInputStream("res/baek/16985.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		

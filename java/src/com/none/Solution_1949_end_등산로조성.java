@@ -13,7 +13,7 @@ public class Solution_1949_end_등산로조성 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1949.txt"));
+		System.setIn(new FileInputStream("res/none/1949.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());
@@ -66,6 +66,7 @@ public class Solution_1949_end_등산로조성 {
 
 			System.out.println("#" + t + " " + result);
 		}
+		goJum.poll();
 
 		br.close();
 	}

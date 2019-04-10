@@ -22,7 +22,7 @@ public class Main_16236_end {
 	static MQ q = new MQ();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek16236.txt"));
+		System.setIn(new FileInputStream("res/baek/16236.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int i = 0; i < MAX; i++) {

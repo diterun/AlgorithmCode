@@ -11,7 +11,7 @@ public class Main_1520_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek1520.txt"));
+		System.setIn(new FileInputStream("res/baek/1520.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine().trim());

@@ -13,7 +13,7 @@ public class Main_1062_end_가르침 {
 	public static void main(String[] args) throws Exception {
 		result = 0;
 		
-		System.setIn(new FileInputStream("baek/1062.txt"));
+		System.setIn(new FileInputStream("res/baek/1062.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine().trim());

@@ -12,7 +12,7 @@ public class Solution_1266_end {
 	static String[] inS;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1266.txt"));
+		System.setIn(new FileInputStream("res/d6/1266.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		combi[2] = 9 * 17;

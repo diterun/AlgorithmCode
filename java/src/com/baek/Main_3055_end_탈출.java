@@ -16,7 +16,7 @@ public class Main_3055_end_탈출 {
 	static StringTokenizer st;
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("baek/3055.txt"));
+		System.setIn(new FileInputStream("res/baek/3055.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine());

@@ -17,7 +17,7 @@ public class Solution_5653_end_줄기세포배양 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5653.txt"));
+		System.setIn(new FileInputStream("res/none/5653.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

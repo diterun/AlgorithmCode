@@ -11,7 +11,7 @@ public class Solution_7092_end {
 	private static char[] m, j, g;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7092.txt"));
+		System.setIn(new FileInputStream("res/d6/7092.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

@@ -10,7 +10,7 @@ public class Main_396_1 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek396_1.txt"));
+		System.setIn(new FileInputStream("res/baek/396.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		result = 0;

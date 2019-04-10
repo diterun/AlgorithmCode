@@ -10,7 +10,7 @@ public class Main_5373_end_큐빙 {
 	static String[] input;
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek5373.txt"));
+		System.setIn(new FileInputStream("res/baek/5373.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());

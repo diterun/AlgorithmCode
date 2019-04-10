@@ -8,7 +8,7 @@ public class Solution_2455_Stains {
 	static int[][] matt;
 
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/2455.txt"));
+		System.setIn(new FileInputStream("res/d8/2455.txt"));
 		Scanner sc = new Scanner(System.in);
 		
 		T = sc.nextInt();

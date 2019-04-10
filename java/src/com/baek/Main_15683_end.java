@@ -21,7 +21,7 @@ public class Main_15683_end {
 	static String[] line;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("baek/15683.txt"));
+		System.setIn(new FileInputStream("res/baek/15683.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		/**
 		 * 맵

@@ -14,7 +14,7 @@ public class Main_17069 {
 
 	public static void main(String[] args) throws Exception {
 		start = System.nanoTime();
-		System.setIn(new FileInputStream("res/baek17069.txt"));
+		System.setIn(new FileInputStream("res/baek/17069.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		n = Integer.parseInt(br.readLine().trim());

@@ -10,7 +10,7 @@ public class Solution_1213_end {
 	static String[] to;
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1213.txt"));
+		System.setIn(new FileInputStream("res/d3/1213.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 //		T = 10;

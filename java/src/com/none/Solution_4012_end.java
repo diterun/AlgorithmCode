@@ -13,7 +13,7 @@ public class Solution_4012_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/4012.txt"));
+		System.setIn(new FileInputStream("res/none/4012.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

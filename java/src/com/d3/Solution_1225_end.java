@@ -13,7 +13,7 @@ public class Solution_1225_end {
 	
 	public static void main(String[] args) throws Exception {
 		start = System.nanoTime();
-		System.setIn(new FileInputStream("res/1225.txt"));
+		System.setIn(new FileInputStream("res/d3/1225.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 //		T = 10;

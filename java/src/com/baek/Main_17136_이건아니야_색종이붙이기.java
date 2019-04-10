@@ -8,7 +8,7 @@ public class Main_17136_이건아니야_색종이붙이기 {
 	static int[][] map = new int[n][n];
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("baek/17136.txt"));
+		System.setIn(new FileInputStream("res/baek/17136.txt"));
 		Scanner sc = new Scanner(System.in);
 		
 		result = Integer.MAX_VALUE;

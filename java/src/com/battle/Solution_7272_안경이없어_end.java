@@ -14,7 +14,7 @@ public class Solution_7272_안경이없어_end {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("battle/7272.txt"));
+		System.setIn(new FileInputStream("res/battle/7272.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		alpha['A'] = 1;

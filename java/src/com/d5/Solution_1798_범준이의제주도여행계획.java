@@ -10,7 +10,7 @@ public class Solution_1798_범준이의제주도여행계획 {
 	static int[][] dp;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1798.txt"));
+		System.setIn(new FileInputStream("res/d5/1798.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
 		T = Integer.parseInt(br.readLine().trim());

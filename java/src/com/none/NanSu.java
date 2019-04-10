@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class NanSu {
 	public static void main(String[] args) throws Exception{
+		Random r = new Random();
 		int n = 10000;
 		int m = 10;
 		FileWriter output = new FileWriter("res1/temp.txt");
@@ -14,7 +15,7 @@ public class NanSu {
 		for (int j = 1; j <= m; j++) {
 			output.write("0 1 " + j + "\n");
 		}
-		
+		System.out.println(r);
 		output.close();
 	}
 

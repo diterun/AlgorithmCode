@@ -22,7 +22,7 @@ public class Main_16234_end {
 	static String[] line;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek16234.txt"));
+		System.setIn(new FileInputStream("res/baek/16234.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		/** 초기화 */

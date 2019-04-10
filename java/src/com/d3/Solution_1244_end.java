@@ -12,7 +12,7 @@ public class Solution_1244_end {
 	static String[] inS;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1244.txt"));
+		System.setIn(new FileInputStream("res/d3/1244.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

@@ -1,6 +1,7 @@
 package com.d3;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Solution_3307_end {
@@ -11,6 +12,7 @@ public class Solution_3307_end {
 	static int[] numCnt = new int[MAX];
 
 	public static void main(String[] args) throws Exception {
+		System.setIn(new FileInputStream("res/d3/3307.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());

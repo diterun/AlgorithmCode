@@ -1,7 +1,7 @@
 package com.d5;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Solution_6782_end_2 {
@@ -15,8 +15,8 @@ public class Solution_6782_end_2 {
 	static int min, max, mid, i, deckStartIndex, deckCount, key, key_i, maginot;
 	
 	public static void main(String[] args) throws Exception{
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader("res/6782.txt"));
+		System.setIn(new FileInputStream("res/6782.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());
 

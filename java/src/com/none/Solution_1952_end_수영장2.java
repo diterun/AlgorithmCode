@@ -45,7 +45,7 @@ public class Solution_1952_end_수영장2 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1952.txt"));
+		System.setIn(new FileInputStream("res/none/1952.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

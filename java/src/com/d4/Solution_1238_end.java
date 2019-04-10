@@ -17,7 +17,7 @@ public class Solution_1238_end {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/1238.txt"));
+		System.setIn(new FileInputStream("res/d4/1238.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = 10;

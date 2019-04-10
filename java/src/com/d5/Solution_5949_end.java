@@ -14,7 +14,7 @@ public class Solution_5949_end {
 	static Stack<Integer> s2 = new Stack<Integer>();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5949.txt"));
+		System.setIn(new FileInputStream("res/d5/5949.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

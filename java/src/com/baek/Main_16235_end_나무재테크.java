@@ -29,7 +29,7 @@ public class Main_16235_end_나무재테크 {
 	static String[] line;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/baek16235.txt"));
+		System.setIn(new FileInputStream("res/baek/16235.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		line = br.readLine().split(" ");

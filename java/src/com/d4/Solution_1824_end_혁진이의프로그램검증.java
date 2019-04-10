@@ -18,7 +18,7 @@ public class Solution_1824_end_혁진이의프로그램검증 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/1824.txt"));
+		System.setIn(new FileInputStream("res/d4/1824.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine());

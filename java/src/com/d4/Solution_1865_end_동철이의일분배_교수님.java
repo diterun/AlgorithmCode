@@ -32,7 +32,7 @@ public class Solution_1865_end_동철이의일분배_교수님 {
 	}
 
 	public static void main(String[] ar) throws Exception {
-		System.setIn(new FileInputStream("res/1865.txt"));
+		System.setIn(new FileInputStream("res/d4/1865.txt"));
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(in.readLine());
 		StringTokenizer tokens;

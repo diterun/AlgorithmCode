@@ -19,7 +19,7 @@ public class Solution_5644_end_무선충전 {
 	static StringTokenizer st, st2;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5644.txt"));
+		System.setIn(new FileInputStream("res/none/5644.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

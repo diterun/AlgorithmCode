@@ -22,7 +22,7 @@ public class Solution_1249_end {
 	static char[] line;
 
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/1249.txt"));
+		System.setIn(new FileInputStream("res/d4/1249.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());
