@@ -13,7 +13,7 @@ public class Solution_7206_fail {
 	static StringBuilder sb = new StringBuilder(2000);
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7206.txt"));
+		System.setIn(new FileInputStream("res/d5/7206.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

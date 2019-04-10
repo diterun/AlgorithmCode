@@ -12,7 +12,7 @@ public class Solution_3074_end_입국심사_FUCK {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3074.txt"));
+		System.setIn(new FileInputStream("res/d4/3074.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

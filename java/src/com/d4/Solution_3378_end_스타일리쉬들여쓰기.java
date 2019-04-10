@@ -16,7 +16,7 @@ public class Solution_3378_end_스타일리쉬들여쓰기 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3378.txt"));
+		System.setIn(new FileInputStream("res/d4/3378.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());

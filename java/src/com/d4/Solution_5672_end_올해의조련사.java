@@ -9,7 +9,7 @@ public class Solution_5672_end_올해의조련사 {
 	static char[] input, result;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5672.txt"));
+		System.setIn(new FileInputStream("res/d4/5672.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

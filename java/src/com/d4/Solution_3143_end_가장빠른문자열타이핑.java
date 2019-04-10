@@ -12,7 +12,7 @@ public class Solution_3143_end_가장빠른문자열타이핑 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3143.txt"));
+		System.setIn(new FileInputStream("res/d4/3143.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

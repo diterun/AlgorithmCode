@@ -20,7 +20,7 @@ public class Solution_6732 {
 	static int[][] count;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/6732.txt"));
+		System.setIn(new FileInputStream("res/d5/6732.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

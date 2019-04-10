@@ -11,7 +11,7 @@ public class Main_1053_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/1053.txt"));
+		System.setIn(new FileInputStream("res/jungol/1053.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		while(true) {

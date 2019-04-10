@@ -14,7 +14,7 @@ public class Main_1840_end {
 	static StringTokenizer st;
 	
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/jung1840.txt"));
+		System.setIn(new FileInputStream("res/jungol/1840.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		st = new StringTokenizer(br.readLine());

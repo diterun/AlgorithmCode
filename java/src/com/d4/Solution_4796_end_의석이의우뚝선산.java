@@ -8,7 +8,7 @@ public class Solution_4796_end_의석이의우뚝선산 {
 	static boolean isUp;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/4796.txt"));
+		System.setIn(new FileInputStream("res/d4/4796.txt"));
 		Scanner sc = new Scanner(System.in);
 
 		T = sc.nextInt();

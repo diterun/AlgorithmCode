@@ -37,7 +37,7 @@ public class Main_1863 {
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/jung1863.txt"));
+		System.setIn(new FileInputStream("res/jungol/1863.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		result = 0;
 

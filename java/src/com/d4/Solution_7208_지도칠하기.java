@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_7208 {
+public class Solution_7208_지도칠하기 {
 	static int T, test_case;
 	static int n, result, now;
 	static int[] nation;

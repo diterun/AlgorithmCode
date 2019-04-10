@@ -33,7 +33,7 @@ public class Main_2247_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/2247.txt"));
+		System.setIn(new FileInputStream("res/jungol/2247.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		result1 = result2 = 0;
 

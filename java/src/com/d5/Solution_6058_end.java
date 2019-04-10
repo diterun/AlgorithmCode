@@ -14,7 +14,7 @@ public class Solution_6058_end {
 	static double[][] wine = new double[2][(MAX * (MAX + 1)) / 2];
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/6058.txt"));
+		System.setIn(new FileInputStream("res/d5/6058.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

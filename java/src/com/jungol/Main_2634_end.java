@@ -13,7 +13,7 @@ public class Main_2634_end {
 	static StringTokenizer st;
 	
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/jung2634.txt"));
+		System.setIn(new FileInputStream("res/jungol/2634.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		result = 0;
 

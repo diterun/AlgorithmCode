@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_7236 {
+public class Solution_7236_end_저수지의물의총깊이구하기 {
 	static int T, test_case, n, result;
 	static char[][] map;
 	static int[][] move = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
@@ -13,7 +13,7 @@ public class Solution_7236 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7236.txt"));
+		System.setIn(new FileInputStream("res/d3/7236.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

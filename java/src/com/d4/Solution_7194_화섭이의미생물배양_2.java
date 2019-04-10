@@ -5,14 +5,14 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_7194 {
+public class Solution_7194_화섭이의미생물배양_2 {
 	static int T, test_case;
 	static int start, end, a, b, result, sub, cnt;
 	static StringTokenizer st;
 	static StringBuilder sb = new StringBuilder(2000);
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7194.txt"));
+		System.setIn(new FileInputStream("res/d4/7194.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());
@@ -54,6 +54,8 @@ public class Solution_7194 {
 							}
 						}
 					}
+
+//				System.out.println(start + " ~ " + end + " | " + result);
 
 					if (end == start) {
 						break;

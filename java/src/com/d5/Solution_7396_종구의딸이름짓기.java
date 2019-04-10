@@ -14,7 +14,7 @@ public class Solution_7396_종구의딸이름짓기 {
 	static MQ q = new MQ();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7396.txt"));
+		System.setIn(new FileInputStream("res/d5/7396.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

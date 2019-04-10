@@ -13,7 +13,7 @@ public class Main_1681_end_해밀턴순환회로 {
 	public static void main(String[] args) throws Exception {
 		result = Integer.MAX_VALUE;
 		
-		System.setIn(new FileInputStream("jungol/1681.txt"));
+		System.setIn(new FileInputStream("res/jungol/1681.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		n = Integer.parseInt(br.readLine().trim());

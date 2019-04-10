@@ -11,7 +11,7 @@ public class Main_2097_end_지하철 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/2097.txt"));
+		System.setIn(new FileInputStream("res/jungol/2097.txt"));
 		Scanner sc = new Scanner(System.in);
 		
 		ins = sc.nextLine().split(" ");

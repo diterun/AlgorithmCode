@@ -12,7 +12,7 @@ public class Solution_3752_end {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3752.txt"));
+		System.setIn(new FileInputStream("res/d4/3752.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());

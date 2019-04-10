@@ -14,7 +14,7 @@ public class Solution_6782_end {
 	static int min, max, mid, i, deckStartIndex, deckCount, key, key_i, maginot;
 	
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/6782.txt"));
+		System.setIn(new FileInputStream("res/d5/6782.txt"));
 		BufferedReader br = new BufferedReader(new FileReader("res/6782.txt"));
 		
 		T = Integer.parseInt(br.readLine().trim());

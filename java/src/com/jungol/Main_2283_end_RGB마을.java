@@ -10,7 +10,7 @@ public class Main_2283_end_RGB마을 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/2283.txt"));
+		System.setIn(new FileInputStream("res/jungol/2283.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		result = 0;
 		r1 = g1 = b1 = Integer.MAX_VALUE;

@@ -13,7 +13,7 @@ public class Solution_5213_end {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5213.txt"));
+		System.setIn(new FileInputStream("res/d4/5213.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

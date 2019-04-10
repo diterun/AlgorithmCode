@@ -12,7 +12,7 @@ public class Solution_3289_end_서로소집합 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3289.txt"));
+		System.setIn(new FileInputStream("res/d4/3289.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

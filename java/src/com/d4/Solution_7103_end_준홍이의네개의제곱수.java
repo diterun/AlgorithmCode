@@ -10,7 +10,7 @@ public class Solution_7103_end_준홍이의네개의제곱수 {
 	static StringBuilder sb = new StringBuilder(400);
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7103.txt"));
+		System.setIn(new FileInputStream("res/d4/7103.txt"));
 		Scanner sc = new Scanner(System.in);
 		
 		for (jeCnt = 1; jeCnt * jeCnt <= 32767; jeCnt++) {

@@ -13,7 +13,7 @@ public class Main_1350_end_최대신장트리 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/1350.txt"));
+		System.setIn(new FileInputStream("res/jungol/1350.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		st = new StringTokenizer(br.readLine().trim());

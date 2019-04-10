@@ -10,7 +10,7 @@ public class Solution_6959_end {
 	static char[] line;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/6959.txt"));
+		System.setIn(new FileInputStream("res/d4/6959.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

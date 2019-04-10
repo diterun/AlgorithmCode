@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_1828_3_end {
+public class Main_1828_end_2 {
 	static int MAX = 10272;
 	static int n, result;
 	static int[][] ref;
@@ -13,7 +13,7 @@ public class Main_1828_3_end {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/jung1828.txt"));
+		System.setIn(new FileInputStream("res/jungol/1828.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		n = Integer.parseInt(br.readLine());

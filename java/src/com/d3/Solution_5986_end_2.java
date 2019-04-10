@@ -4,14 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution_5986_2_end {
+public class Solution_5986_end_2 {
 	static int[] sosu = new int[200];
 	static int[] nCase = new int[3000];
 	static int T, test_case, sosui, sum;
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5986.txt"));
+		System.setIn(new FileInputStream("res/d3/5986.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		getSosu();

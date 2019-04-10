@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_1808 {
+public class Solution_1808_지희의고장난계산기 {
 	static int T, test_case;
 	static int result, x, dCnt;
 	static int[] d = new int[10];

@@ -68,7 +68,7 @@ public class Main_1239_end_비밀편지 {
 		word[50] = 'H';
 		word[56] = 'H';
 		
-		System.setIn(new FileInputStream("jungol/1239.txt"));
+		System.setIn(new FileInputStream("res/jungol/1239.txt"));
 		Scanner sc = new Scanner(System.in);
 
 		n = Integer.parseInt(sc.nextLine().trim());

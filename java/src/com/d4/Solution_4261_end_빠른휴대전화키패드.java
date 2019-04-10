@@ -15,7 +15,7 @@ public class Solution_4261_end_빠른휴대전화키패드 {
 
 	public static void main(String[] args) throws Exception {
 		start = System.nanoTime();
-		System.setIn(new FileInputStream("res/4261.txt"));
+		System.setIn(new FileInputStream("res/d4/4261.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		mat[2] = 7;

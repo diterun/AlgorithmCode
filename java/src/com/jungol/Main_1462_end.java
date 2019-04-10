@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Main_1462 {
+public class Main_1462_end {
 	static int n, m, result;
 	static char[][] map;
 	static char[] in;
@@ -16,7 +16,7 @@ public class Main_1462 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/jung1462.txt"));
+		System.setIn(new FileInputStream("res/jungol/1462.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		st = new StringTokenizer(br.readLine());

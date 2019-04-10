@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class Solution_2983 {
+public class Solution_2983_두번이상등장하는문자열 {
 	static int T, test_case;
 	static int result, len, now, subResult, nowDiff, diff;
 	static char[] input;

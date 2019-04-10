@@ -12,7 +12,7 @@ public class Solution_7338_end_현규의연봉계산법 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7338.txt"));
+		System.setIn(new FileInputStream("res/d4/7338.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

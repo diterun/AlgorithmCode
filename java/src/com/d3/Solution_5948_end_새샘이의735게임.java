@@ -12,7 +12,7 @@ public class Solution_5948_end_새샘이의735게임 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5948.txt"));
+		System.setIn(new FileInputStream("res/d3/5948.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());

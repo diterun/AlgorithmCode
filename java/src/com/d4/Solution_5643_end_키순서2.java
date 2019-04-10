@@ -16,7 +16,7 @@ public class Solution_5643_end_키순서2 {
 	static String[] ins;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/5643.txt"));
+		System.setIn(new FileInputStream("res/d4/5643.txt"));
 		Scanner sc = new Scanner(System.in);
 
 		T = Integer.parseInt(sc.nextLine().trim());

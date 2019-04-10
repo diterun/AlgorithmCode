@@ -10,7 +10,7 @@ public class Solution_4301_end_콩많이심기 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/4301.txt"));
+		System.setIn(new FileInputStream("res/d4/4301.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

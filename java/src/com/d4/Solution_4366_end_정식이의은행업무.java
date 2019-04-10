@@ -11,7 +11,7 @@ public class Solution_4366_end_정식이의은행업무 {
 	static char[] line;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/4366.txt"));
+		System.setIn(new FileInputStream("res/d4/4366.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

@@ -56,7 +56,7 @@ public class Solution_3124_end {
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/3124.txt"));
+		System.setIn(new FileInputStream("res/d4/3124.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		T = Integer.parseInt(br.readLine().trim());

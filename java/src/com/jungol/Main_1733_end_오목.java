@@ -12,7 +12,7 @@ public class Main_1733_end_오목 {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("jungol/1733.txt"));
+		System.setIn(new FileInputStream("res/jungol/1733.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		for (i = 6; i < 25; i++) {

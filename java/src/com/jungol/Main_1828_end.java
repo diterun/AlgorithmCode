@@ -10,7 +10,7 @@ public class Main_1828_end {
 	static String[] inputS;
 	
 	public static void main(String[] args) throws Exception{
-		System.setIn(new FileInputStream("res/jung1828.txt"));
+		System.setIn(new FileInputStream("res/jungol/1828.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		n = Integer.parseInt(br.readLine());

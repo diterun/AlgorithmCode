@@ -5,14 +5,14 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_7102_준홍이의카드놀이 {
+public class Solution_7102_end_준홍이의카드놀이 {
 	static int T, test_case, n, m, len, max;
 	static int[] numbers;
 	static StringTokenizer st;
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/7102.txt"));
+		System.setIn(new FileInputStream("res/d3/7102.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		T = Integer.parseInt(br.readLine().trim());
