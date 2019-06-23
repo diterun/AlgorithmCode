@@ -20,12 +20,12 @@ int main()
             sum[j] += i;
         }
     }
-
+    printf("hi %d", 5);
     scanf("%d", &T);
 	for(test_case = 1; test_case <= T; ++test_case)
 	{
         scanf("%d %d", &l, &r);
-
+ 
 		printf("#%d %ld\n", test_case, sum[r] - sum[l -1]);
     }
 	return 0;
