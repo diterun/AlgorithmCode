@@ -31,9 +31,11 @@ void getMinPrice(int index, int totalAesth, int totalPrice, int otherAesth){
         return;
     }
 
+    /* 현재 보석을 추가하면 총 가격이 이전의 result보다 큰 경우에는 추가하지 않는다. */
     if(totalPrice + jewelry[index][0] - money < result){
         getMinPrice(index + 1, totalAesth + jewelry[index][1], totalPrice + jewelry[index][0], otherAesth - jewelry[index][1]);
     }
+    /* 현재 보석을 추가 안하면 총 가치와 남은 가치의 합이 기준치는 넘지 않으면 빼는 경우는 없다. */
     if(totalAesth + otherAesth - jewelry[index][1] >= x){
         getMinPrice(index + 1, totalAesth, totalPrice, otherAesth - jewelry[index][1]);
     }
