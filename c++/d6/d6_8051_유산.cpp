@@ -15,10 +15,10 @@ void areaDistribute(int index
                     , long long otherArea
                     , long long otherValue){
     if(index == n){
-        if(hoArea - d <= daArea && daArea <= hoArea + d){
+        // if(hoArea - d <= daArea && daArea <= hoArea + d){
             // cout << hoArea << ", " << hoValue << " vs " << daArea <<", " << daValue << endl;
             result = getMin(result, hoValue - daValue);
-        }
+        // }
         return;
     }
 
@@ -35,7 +35,8 @@ void areaDistribute(int index
                     , otherValue);
     }
 
-    if(hoValue + otherValue - result > daValue + area[index][1]){
+    if(hoValue + otherValue - result > daValue + area[index][1]
+    && daArea + area[index][0] <= hoArea + d + otherArea){
         areaDistribute(index + 1
                     , hoArea
                     , hoValue
@@ -45,7 +46,9 @@ void areaDistribute(int index
                     , otherValue);
     }
 
-    if((hoArea - d <= daArea + otherArea) && (hoValue + otherValue - result > daValue)){
+    if((hoArea - d <= daArea + otherArea)
+    && (daArea <= hoArea + d + otherArea)
+    && (hoValue + otherValue - result > daValue)){
         areaDistribute(index + 1
                     , hoArea
                     , hoValue
