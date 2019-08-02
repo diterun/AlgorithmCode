@@ -3,30 +3,39 @@ using namespace std;
 
 #define MAX 11
 
-int T, t, n, i, j, temp, result;
-double towers[MAX][3];
+int T, t, h, w, r, c, i, j, result;
+char map[MAX][MAX];
+char block[MAX][MAX];
 
 int main(void){
     cin >> T;
 
     for(t = 0; t < T; ++t){
         result = 0;
+        for(i = 0; i < MAX; i++){
+            for(j = 0; j < MAX; j++){
+                map[i][j] = '#';
+                block[i][j] = '.';
+            }
+        }
 
         /* 입력 */
-        cin >> n;
-        for(i = 0; i < n; i++){
-            cin >> towers[i][0] >> towers[i][1] >> towers[i][2];
+        cin >> h >> w >> r >> c;
+        for(i = 0; i < h; i++){
+            cin >> map[i];
         }
+        for(i = 0; i < r; i++){
+            cin >> block[i];
+        }
+
+        // for(i = 0; i < h; i++){
+        //     for(j = 0; j < w; j++){
+        //         cout << map[i][j];
+        //     }
+        //     cout<< endl;
+        // }
 
         cout << result << endl;
-
-        /* 초기화 */
-        result = 0;
-        for(i = 0; i < n; i++){
-            towers[i][0] = 0;
-            towers[i][1] = 0;
-            towers[i][2] = 0;
-        }
     }
 
     return 0;
