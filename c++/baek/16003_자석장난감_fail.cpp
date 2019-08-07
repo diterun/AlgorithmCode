@@ -26,7 +26,6 @@ private:
     Node* now;
     int me;
     int count;
-    string fix;
 public:
     Magnet(int magnetID){
         me = magnetID;
@@ -41,16 +40,32 @@ public:
             return true;
         }
 
-        if(com->getFix().find(fix) == string::npos){
-            return true;
+        bool result = false;
+        Node* temp = head;
+        com->clearNow();
+        int comMagnetID = com->nowMagnetID();
+
+        while(temp != NULL){
+            if(temp->getMagnetID() == comMagnetID){
+                temp = temp->getNext();
+                comMagnetID = com->nowMagnetID();
+            } else if(temp->getMagnetID() > comMagnetID){
+                comMagnetID = com->nowMagnetID();
+                if(comMagnetID == -1){
+                    result = true;
+                    break;
+                }
+            } else {
+                result = true;
+                break;
+            }
         }
 
-        return false;
+        return result;
     }
 
     void clearNow(){ now = head; }
     int getCount(){ return count; }
-    string getFix(){ return fix; }
 
     int nowMagnetID(){
         if(now == NULL){
@@ -114,18 +129,6 @@ public:
         }
 
         count--;
-    }
-
-    void setFix(){
-        string strTemp = "";
-        Node* temp = head;
-
-        while(temp != NULL){
-            strTemp += to_string(temp->getMagnetID()) + ",";
-            temp = temp->getNext();
-        }
-
-        fix = strTemp;
     }
 
     void deleteAll(){
@@ -199,7 +202,6 @@ void progress(){
                     }
 
                     magnet[now]->removeNode(i);
-                    magnet[now]->setFix();
                     now = magnet[i]->nowMagnetID();
                 }
                 magnet[i]->removeNode(i);
@@ -227,10 +229,6 @@ void inputData(){
 
         magnet[a]->addNode(b);
         magnet[b]->addNode(a);
-    }
-
-    for(i = 1; i <= n; i++){
-        magnet[i]->setFix();
     }
 }
 

@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 
 // 23개 중에서 5개... 15개... 18개 순으로 나아짐
@@ -7,13 +8,9 @@ using namespace std;
 // 18개 : 쓸 때에 가격이 넘어 버리면 포기
 // 20개 : result가 0이 되면 끝내기
 
-// 조합 탐색을 써보자
-// 2^15 승 까지는 메모이제이션을 통해 값을 저장해두자.
-// 그 
-// 16개 정도에다가 가치, 가격을 저장
-// 2^17개 * 2개
-// 10승, 7승
-// 1024 * 128 * 2 = 20~30만
+// 가지치기 - 추가하면 result를 넘는 경우 삭제
+// 휴리스틱 - 추가하지 않으면 아예 원하는 x에 도달 못하는 경우 삭제
+// 메모이제이션 - 17개 까지의 모든 경우의 수 중에 곂치는 부분 삭제
 
 int T, t;
 int n, x, k, money, result, i, j, myJewel;
@@ -22,30 +19,55 @@ int minPrice, maxPrice, sumPrice;
 /* 가치 */
 int minAesth, maxAesth, sumAesth;
 int jewelry[32][2];
-double jewelryAP[32];
+int midIndex = 16;
+map<pair<int, int>, int> savePoint;
 
 int getMin(int a, int b);
 int getMax(int a, int b);
 void myBubbleSort();
 
 void getMinPrice(int index, int totalAesth, int totalPrice, int otherAesth){
-    // cout << index << " : " << totalAesth << ", " << totalPrice << " and " << otherAesth << endl;
     if(totalAesth >= x){
         result = getMin(result, totalPrice - money);
-        // cout << "END : " << result << ", " << totalPrice << " " << totalAesth << endl;
         return;
     }
-    if(index == n || result == 0){
+    if(index == midIndex){
+        savePoint.insert(make_pair(make_pair(totalAesth, totalPrice), otherAesth));
         return;
+    }
+    if(result == 0){
+        return;
+    }
+    /* 현재 보석을 추가 안하면 총 가치와 남은 가치의 합이 기준치는 넘지 않으면 빼는 경우는 없다. */
+    if(totalAesth + otherAesth - jewelry[index][1] >= x){
+        getMinPrice(index + 1, totalAesth, totalPrice, otherAesth - jewelry[index][1]);
     }
 
     /* 현재 보석을 추가하면 총 가격이 이전의 result보다 큰 경우에는 추가하지 않는다. */
     if(totalPrice + jewelry[index][0] - money < result){
         getMinPrice(index + 1, totalAesth + jewelry[index][1], totalPrice + jewelry[index][0], otherAesth - jewelry[index][1]);
     }
+}
+
+void getMinPriceNext(int index, int totalAesth, int totalPrice, int otherAesth){
+    if(totalAesth >= x){
+        result = getMin(result, totalPrice - money);
+        return;
+    }
+    if(index == n){
+        return;
+    }
+    if(result == 0){
+        return;
+    }
     /* 현재 보석을 추가 안하면 총 가치와 남은 가치의 합이 기준치는 넘지 않으면 빼는 경우는 없다. */
     if(totalAesth + otherAesth - jewelry[index][1] >= x){
-        getMinPrice(index + 1, totalAesth, totalPrice, otherAesth - jewelry[index][1]);
+        getMinPriceNext(index + 1, totalAesth, totalPrice, otherAesth - jewelry[index][1]);
+    }
+
+    /* 현재 보석을 추가하면 총 가격이 이전의 result보다 큰 경우에는 추가하지 않는다. */
+    if(totalPrice + jewelry[index][0] - money < result){
+        getMinPriceNext(index + 1, totalAesth + jewelry[index][1], totalPrice + jewelry[index][0], otherAesth - jewelry[index][1]);
     }
 }
 
@@ -56,11 +78,11 @@ int main(){
         sumPrice = sumAesth = maxPrice = maxAesth = 0;
         minPrice = minAesth = 30000001;
         result = 0;
+        savePoint.clear();
 
         for(i = 0; i < 32; i++){
             jewelry[i][0] = 0;
             jewelry[i][1] = 0;
-            jewelryAP[i] = 0;
         }
 
         cin >> n;
@@ -79,8 +101,6 @@ int main(){
             minAesth = getMin(minAesth, jewelry[i][1]);
             maxAesth = getMax(maxAesth, jewelry[i][1]);
             sumAesth += jewelry[i][1];
-
-            jewelryAP[i] = (double)jewelry[i][1] / (double) jewelry[i][0];
         }
 
         cin >> x;
@@ -115,10 +135,6 @@ int main(){
         }
 
         myBubbleSort();
-        for(i = 0; i < n; i++){
-            cout <<"("<< jewelry[i][0] << ", " << jewelry[i][1] << ") ";
-        }
-        cout<<endl;
 
         int initAesth = 0;
         for(i = 0; i < n; i++){
@@ -129,10 +145,13 @@ int main(){
             }
         }
 
-        cout << result << endl;
-
         /* (현재 인덱스, 사려는 보석, 총 가치, 총 가격, 남은 것들의 총 가치) */
         getMinPrice(0, 0, 0, sumAesth);
+
+        map<pair<int, int>, int>::iterator iter;
+        for(iter = savePoint.begin(); iter != savePoint.end(); iter++){
+            getMinPriceNext(midIndex, iter->first.first, iter->first.second, iter->second);
+        }
 
         cout << "#" << t << " " << result << endl;
 	}
@@ -157,7 +176,7 @@ void myBubbleSort(){
 
     for(i = 0; i < n; i++){
         for(j = i + 1; j < n; j++){
-            if(jewelryAP[i] < jewelryAP[j]){
+            if(jewelry[i][1] < jewelry[j][1]){
                 temp = jewelry[i][0];
                 jewelry[i][0] = jewelry[j][0];
                 jewelry[j][0] = temp;
@@ -165,30 +184,17 @@ void myBubbleSort(){
                 temp = jewelry[i][1];
                 jewelry[i][1] = jewelry[j][1];
                 jewelry[j][1] = temp;
+            } else if(jewelry[i][1] == jewelry[j][1]){
+                if(jewelry[i][0] < jewelry[j][0]){
+                    temp = jewelry[i][0];
+                    jewelry[i][0] = jewelry[j][0];
+                    jewelry[j][0] = temp;
 
-                temp2 = jewelryAP[i];
-                jewelryAP[i] = jewelryAP[j];
-                jewelryAP[j] = temp2;
+                    temp = jewelry[i][1];
+                    jewelry[i][1] = jewelry[j][1];
+                    jewelry[j][1] = temp;
+                }
             }
-            // if(jewelry[i][1] < jewelry[j][1]){
-            //     temp = jewelry[i][0];
-            //     jewelry[i][0] = jewelry[j][0];
-            //     jewelry[j][0] = temp;
-
-            //     temp = jewelry[i][1];
-            //     jewelry[i][1] = jewelry[j][1];
-            //     jewelry[j][1] = temp;
-            // } else if(jewelry[i][1] == jewelry[j][1]){
-            //     if(jewelry[i][0] > jewelry[j][0]){
-            //         temp = jewelry[i][0];
-            //         jewelry[i][0] = jewelry[j][0];
-            //         jewelry[j][0] = temp;
-
-            //         temp = jewelry[i][1];
-            //         jewelry[i][1] = jewelry[j][1];
-            //         jewelry[j][1] = temp;
-            //     }
-            // }
         }
     }
 }

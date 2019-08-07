@@ -25,6 +25,7 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "array": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "map": "cpp"
     }
 }
