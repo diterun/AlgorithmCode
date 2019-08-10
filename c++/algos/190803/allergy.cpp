@@ -10,127 +10,72 @@ using namespace std;
 #define MAX 51
 
 int T, t, n, m, l, result, i, j, k;
+long long foods[MAX], possible;
 string friends[MAX];
 string temp;
-int foods[MAX][MAX + 1];
-bool check[MAX];
 
-class CanEat{
-private:
-    int num;
-    CanEat* next;
-public:
-    CanEat(int n){
-        num = n;
-        next = NULL;
-    }
-
-    void setNext(CanEat* n){ next = n; }
-    CanEat* getNext(){ return next; }
-
-    int getNum(){ return num; }
-};
-
-class Food{
-private:
-    int count;
-    CanEat* head;
-    CanEat* tail;
-public:
-    Food(){
-        count = 0;
-        head = NULL;
-        tail = NULL;
-    }
-
-    void setCount(int c){ count = c; }
-    int getCount(){ return count; }
-
-    void addFriendNumber(int fnum){
-        CanEat* nNode = new CanEat(fnum);
-
-        if(head == NULL){
-            head = tail = nNode;
-        } else {
-            tail->setNext(nNode);
-            tail = nNode;
-        }
-    }
-
-    void setTrue(){
-        CanEat* tem = head;
-
-        while(tem != NULL){
-            check[tem->getNum()] = true;
-            tem = tem->getNext();
-        }
-    }
-
-    void setFalse(){
-        CanEat* tem = head;
-
-        while(tem != NULL){
-            check[tem->getNum()] = false;
-            tem = tem->getNext();
-        }
-    }
-
-    void clear(){
-        CanEat* tem = head;
-
-        while(tem != NULL){
-            tem = tem->getNext();
-            delete head;
-            head = tem;
-        }
-    }
-};
+void makeOrNot(int index, int count, long long makeFood);
 
 int main(void){
     cin >> T;
 
     for(t = 0; t < T; ++t){
-        result = 0;
+        result = 50;
         for(i = 0; i < MAX; i++){
             friends[i] = "";
-            check[i] = false;
+            foods[i] = 0;
+            possible = 0;
         }
-        Food foods[MAX];
 
         cin >> n >> m;
         for(i = 0; i < n; i++){
             cin >> friends[i];
+            possible |= 1 << i;
         }
         for(i = 0; i < m; i++){
             cin >> l;
 
-            foods[i].setCount(l);
             for(j = 0; j < l; j++){
                 cin >> temp;
 
                 for(k = 0; k < n; k++){
                     if(friends[k] == temp){
-                        foods[i].addFriendNumber(k);
+                        foods[i] |= (1 << k);
                         break;
                     }
                 }
             }
         }
 
-        for(i = 0; i < m; i++){
-            foods[i].setTrue();
-            for(j = 0; j < n; j++){
-                cout << check[j] << " ";
-            }
-            cout << endl;
-        }
+        makeOrNot(0, 0, 0);
 
         cout << result << endl;
-
-        for(i = 0; i < MAX; i++){
-            foods[i].clear();
-        }
     }
 
     return 0;
+}
+
+void makeOrNot(int index, int count, long long makeFood){
+    if(count >= result){
+        return;
+    }
+    if(index == m){
+        long long itIsPossible = 0;
+        int sub = 0;
+
+        for(int i = 0; i < m; i++){
+            if(makeFood & 1 << i){
+                sub++;
+                itIsPossible |= foods[i];
+            }
+        }
+
+        if(itIsPossible == possible){
+            result = result < sub ? result : sub;
+        }
+        return;
+    }
+
+    makeOrNot(index + 1, count + 1, makeFood | (1 << index));
+    makeOrNot(index + 1, count, makeFood);
 }
