@@ -22,59 +22,193 @@ using namespace std;
 모든 상사들을 돌며 연봉을 높이고 그 상사들의 숫자 만큼 결과를 높인다.
 그 이후에는 자신보다 연봉이 높은 상사로 가거나 다슬이에게 간다.
 */
+
+// 그냥 쌩으로 위랑 비교해가면서 찾아가면서 바꾸면 10개 중 2개 맞음
+
 #define MAX 300001
 
-int N, result, money, up;
-int worker[MAX][2];
+class PayNode{
+private:
+    int pay;
+    int num;
+    PayNode* next;
+    PayNode* prev;
+public:
+    PayNode(int p, int n){
+        pay = p;
+        num = n;
+        next = NULL;
+        prev = NULL;
+    }
 
-void getUpgradeCnt(){
-    cin >> N;
-    cin >> worker[0][0];
-    worker[0][1] = -1;
+    void setPay(int p){ pay = p; }
+    void setNum(int n){ num = n; }
+    void setNext(PayNode* n){ next = n; }
+    void setPrev(PayNode* p){ prev = p; }
 
-    for(int i = 1; i <= N; i++){
-        scanf("%d", &worker[i][0]);
-        scanf("%d", &worker[i][1]);
+    int getPay(){ return pay; }
+    int getNum(){ return num; }
+    PayNode* getNext(){ return next; }
+    PayNode* getPrev(){ return prev; }
+};
 
-        money = worker[i][0];
-        up = worker[i][1];
+class PayList{
+private:
+    PayNode* head;
+    PayNode* tail;
+    PayNode* now;
+    int count;
+public:
+    PayList(){
+        head = NULL;
+        tail = NULL;
+        now = NULL;
+        count = 0;
+    }
 
-        while(up != -1){
-            if(worker[up][0] < money){
-                result++;
-                worker[up][0] = money;
+    int getCount(){ return count; }
+
+    void addNext(int pay, int num){
+        PayNode* nNode = new PayNode(pay, num);
+
+        if(now == head){
+            if(head == tail){
+                head = tail = nNode;
             } else {
-                break;
-            }
+                now = now->getNext();
 
-            up = worker[up][1];
+                nNode->setNext(now);
+                nNode->setPrev(head);
+
+                head->setNext(nNode);
+                now->setPrev(nNode);
+            }
+        } else if(now == tail){
+            nNode->setPrev(now);
+            now->setNext(nNode);
+
+            tail = nNode;
+        } else {
+            PayNode* nowNext = now->getNext();
+            PayNode* nowPrev = now->getPrev();
+
+            nowNext->setNext(nNode);
+            nowPrev->setNext(nNode);
         }
+
+        count++;
+    }
+
+    void deleteNow(){
+        if(now == head){
+            if(head == tail){
+                head = tail = NULL;
+                delete now;
+            } else {
+                head = now->getNext();
+                now->getNext()->setPrev(NULL);
+                delete now;
+            }
+        } else if(now == tail){
+            tail = now->getPrev();
+            now->getPrev()->setNext(NULL);
+            delete now;
+        } else {
+            PayNode* nowNext = now->getNext();
+            PayNode* nowPrev = now->getPrev();
+
+            nowNext->setPrev(nowPrev);
+            nowPrev->setNext(nowNext);
+            delete now;
+        }
+        count--;
+    }
+
+    void clearNow(){
+        now = head;
+    }
+};
+
+class Employee{
+private:
+    int num;
+    int bossNum;
+    PayList list;
+public:
+    Employee(int n, int p, int b){
+        num = n;
+        bossNum = b;
+        list.clearNow();
+        list.addNode(p, n);
+    }
+
+    int getBoss(){ return bossNum;}
+
+    int goToBoss(Employee* boss){
+        int changeCount = 0;
+
+        // 이 부분을 만들어야 한다.
+        if(boss->getBoss() == -1){
+            return list.getCount() - 1;
+        }
+        return changeCount;
+    }
+};
+
+void inputAndMakeStruct();
+void processOne();
+void initialize();
+void deleteAll();
+
+int n, inputPay, inputBoss, i;
+Employee** empl;
+long long result;
+
+int main(int argc, char** argv)
+{
+	int t;
+	int T;
+
+	cin >> T;
+
+	for(t = 1; t <= T; ++t){
+        initialize();
+        inputAndMakeStruct();
+        processOne();
+
+        cout << "#" << t << " " << result << endl;
+        deleteAll();
+	}
+
+	return 0;
+}
+
+void processOne(){
+    for(i = n; i >= 0; i--){
+        Employee* boss = empl[empl[i]->getBoss()];
+
+        result += empl[i]->goToBoss(boss);
+    }
+}
+
+void inputAndMakeStruct(){
+    cin >> n;
+    cin >> inputPay;
+
+    empl = new Employee*[n + 1];
+    empl[0] = new Employee(0, inputPay, -1);
+
+    for(i = 1; i <= n; i++){
+        scanf("%d", &inputPay);
+        scanf("%d", &inputBoss);
+        empl[i] = new Employee(i, inputPay, inputBoss);
     }
 }
 
 void initialize(){
-    for(int i = 0; i < MAX; i++){
-        worker[i][0] = 0;
-        worker[i][1] = 0;
-    }
     result = 0;
 }
 
-int main(int argc, char** argv)
-{
-	int test_case;
-	int T;
-    cout<< endl;
+void deleteAll(){
 
-	cin>>T;
-
-	for(test_case = 1; test_case <= T; ++test_case)
-	{
-        initialize();
-
-        getUpgradeCnt();
-
-        cout << "#" << test_case << " " << result << endl;
-	}
-	return 0;
 }
