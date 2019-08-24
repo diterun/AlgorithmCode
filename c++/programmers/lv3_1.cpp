@@ -2,47 +2,57 @@
 #include <vector>
 using namespace std;
 
-vector<int> solution(int n, int s);
+int solution(string s);
+int getMax(int a, int b);
 
 int main(){
-  vector<int> result = solution(2, 9);
-  for(int i = 0; i < result.size(); i++){
-    cout << result[i] << " ";
-  }
-  cout << endl;
-
-  result = solution(3, 10);
-  for(int i = 0; i < result.size(); i++){
-    cout << result[i] << " ";
-  }
-  cout << endl;
+  cout << solution("abbcde") << endl;
+  cout << solution("abcdcba") << endl;
+  cout << solution("abacde") << endl;
+  cout << solution("cdeaba") << endl;
+  cout << solution("cdecaa") << endl;
 
   return 0;
 }
 
-vector<int> solution(int n, int s) {
-    vector<int> answer;
+int getMax(int a, int b){
+  return a > b ? a : b;
+}
 
-    if(n > s){
-      answer.push_back(-1);
-      return answer;
-    } else if(s % n == 0){
-      int num = s / n;
-      for(int i = 0; i < n; i++){
-        answer.push_back(num);
+int solution(string s)
+{
+  int answer=0;
+  int strLen = s.length();
+
+  for(int i = 0; i < strLen; i++){
+    int count = 1;
+    int count2 = 0;
+
+    for(int j = 1;;j++){
+      if(i - j < 0 || i + j >= strLen){
+        break;
       }
-      return answer;
+      if(s[i - j] == s[i + j]){
+        count += 2;
+      } else {
+        break;
+      }
     }
 
-    int minNumber = s / n;
-    int otherCnt = s % n;
-
-    for(int i = 0; i < n - otherCnt; i++){
-        answer.push_back(minNumber);
+    for(int j = 0;;j++){
+      if(i - j < 0 || i + j + 1>= strLen){
+        break;
+      }
+      if(s[i - j] == s[i + j + 1]){
+        count2 += 2;
+      } else {
+        break;
+      }
     }
-    for(int i = n - otherCnt; i < n; i++){
-        answer.push_back(minNumber + 1);
-    }
 
-    return answer;
+    count = getMax(count, count2);
+    answer = getMax(answer, count);
+  }
+
+  return answer;
 }
