@@ -69,6 +69,8 @@
         "sstream": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xstring": "cpp",
+        "xlocale": "cpp"
     }
 }
