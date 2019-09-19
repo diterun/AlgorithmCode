@@ -1,4 +1,5 @@
 #include<iostream>
+#include<limits.h>
 using namespace std;
 
 /*
@@ -11,12 +12,17 @@ ababa
 aba
 라면, 2번 들어간 것이다~
 */
+typedef unsigned long long ull;
 
 string inputString;
 string inputWord;
 int result;
+ull mod = ULLONG_MAX;
+int d = 259;
 
 void processing(int t){
+    int wordLen = inputWord.length();
+    cout << wordLen << endl;
     // 
     printf("#%d %d\n", t, result);
 }

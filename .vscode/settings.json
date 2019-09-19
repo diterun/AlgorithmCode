@@ -71,6 +71,7 @@
         "typeindex": "cpp",
         "valarray": "cpp",
         "xstring": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "climits": "cpp"
     }
 }
