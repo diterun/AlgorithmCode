@@ -13,10 +13,12 @@ int reflica[MAX];
 bool canCuttingTree(int diff){
     int cuttingSum = 0;
     
+    // 복사
     for(int i = 0; i < n; i++){
         reflica[i] = A[i];
     }
 
+    // 앞으로 가면서 한 자리 뒤의 애보다 크면 큰 만큼 잘라준다.
     for(int i = 1; i < n; i++){
         if(reflica[i] > reflica[i - 1] + diff){
             cuttingSum += reflica[i] - reflica[i - 1] - diff;
@@ -24,6 +26,7 @@ bool canCuttingTree(int diff){
         }
     }
 
+    // 뒤로 가면서 한 자리 앞의 애보다 크면 큰 만큼 잘라준다.
     for(int i = n - 2; i >= 0; i--){
         if(reflica[i] > reflica[i + 1] + diff){
             cuttingSum += reflica[i] - reflica[i + 1] - diff;
@@ -31,6 +34,7 @@ bool canCuttingTree(int diff){
         }
     }
 
+    // 자르고 생긴 cutting sum의 크기가 k보다 크면 안되는 것.
     if(cuttingSum > k){
         return false;
     } else {
@@ -39,6 +43,7 @@ bool canCuttingTree(int diff){
 }
 
 void processing(int t){
+    // 만약에 제일 작은 값으로 가능하다면 바로 끝
     if(canCuttingTree(mymin)){
         printf("#%d %d\n", t, mymin);
         return;
@@ -64,6 +69,7 @@ void processing(int t){
     }
 }
 
+// 데이터 입력
 void inputData(){
     mymin = mymax = 0;
     scanf("%d %d", &n, &k);
